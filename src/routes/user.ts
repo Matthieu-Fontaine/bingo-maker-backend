@@ -3,6 +3,14 @@ import { initDb } from '../db/database';
 
 const router = Router();
 
+router.get('/user', async (req, res) => {
+  const db = await initDb();
+
+  const users = await db.all('SELECT * FROM users');
+
+  res.json(users);
+});
+
 router.post('/user', async (req, res) => {
   const { name } = req.body;
 
