@@ -6,14 +6,14 @@ import bingoContentRoutes from './routes/bingoContent';
 const app = express();
 
 const corsOptions = {
-  origin: 'https://bingo-maker-rho.vercel.app', // Remplacez par l'URL de votre frontend
+  origin: '*',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204
 };
 
 app.use(cors(corsOptions));
-
+// app.use(cors());
 app.use(express.json());
 
 app.use('/api', userRouter);
