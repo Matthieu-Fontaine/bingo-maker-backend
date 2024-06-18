@@ -3,7 +3,7 @@ import { open } from 'sqlite';
 
 export const initDb = async () => {
   const db = await open({
-    filename: './bingo.db',
+    filename: 'bingo.db',
     driver: sqlite3.Database
   });
 
