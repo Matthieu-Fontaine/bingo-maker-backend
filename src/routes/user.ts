@@ -70,11 +70,11 @@ router.put('/user/:name/bingo', async (req, res) => {
 
 const generateBingoGrid = () => {
   const items = [
-    'Mot1', 'Mot2', 'Mot3', 'Mot4', 'Mot5',
-    'Mot6', 'Mot7', 'Mot8', 'Mot9', 'Mot10',
-    'Mot11', 'Mot12', 'Mot13', 'Mot14', 'Mot15',
-    'Mot16', 'Mot17', 'Mot18', 'Mot19', 'Mot20',
-    'Mot21', 'Mot22', 'Mot23', 'Mot24', 'Mot25'
+    'Marie aigri', 'Matthieu agonie', 'Chute sur notre tente', 'Julia agonie', 'Se faire volé un truc au camping',
+    'Lorenzo absent... ', 'Mangé des nouilles à 2€', 'Arrivé au festival ?', 'Le bingo y fonctionne plus', 'Eau potable pas potable',
+    'Le degueulis', 'Changement de tente', 'Insolation', 'New private joke', 'Malade (bonus tourista)',
+    'Attendre 2 heures pour la douche', 'Pluie de grêlons', 'Musique claqué au sol', 'Embrouille avec un random', 'Perdre quelqu\'un',
+    'Pogo géant', 'Annulation d\'un concert banger', 'G mal au pied', 'Porté moi svp', 'G pu d\'idée'
   ];
   const shuffled = items.sort(() => 0.5 - Math.random());
   return shuffled.slice(0, 25).map(item => ({ item, checked: false }));
